@@ -1,0 +1,479 @@
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .skills-grid,
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #dark-mode-toggle,
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+:root {
+    --primary-color: #6e8efb;
+    --secondary-color: #a777e3;
+    --text-color: #333;
+    --bg-color: #fff;
+    --card-bg: #f4f4f4;
+    --html-color: #e34c26;
+    --css-color: #264de4;
+    --js-color: #f0db4f;
+    --react-color: #61dafb;
+}
+
+.dark-mode {
+    --primary-color: #8f7fee;
+    --secondary-color: #c49bff;
+    --text-color: #ffffff;
+    --bg-color: #1a1a1a;
+    --card-bg: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 1rem;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Photos/qual-e-a-melhor-linguagem-de-pro.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    transform: translateZ(-1px) scale(2);
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav.scrolled {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.452);
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav.scrolled a {
+    color: var(--text-color);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+section {
+    padding: 4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skills-grid,
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+p {
+    padding-bottom: 1rem;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.work-item {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.work-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-item-content {
+    padding: 1.5rem;
+}
+
+#skills {
+    background-color: var(--card-bg);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.skill-progress {
+    height: 100%;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.skill-item.html {
+    background-color: var(--html-color);
+    color: white;
+}
+
+.skill-item.css {
+    background-color: var(--css-color);
+    color: white;
+}
+
+.skill-item.javascript {
+    background-color: var(--js-color);
+    color: #333;
+}
+
+.skill-item.react {
+    background-color: #282c34;
+    color: var(--react-color);
+}
+
+.html .skill-progress {
+    background-color: #f16529;
+}
+
+.css .skill-progress {
+    background-color: #2965f1;
+}
+
+.javascript .skill-progress {
+    background-color: #f0db4f;
+}
+
+.react .skill-progress {
+    background-color: #61dafb;
+}
+
+#contact form {
+    display: grid;
+    gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--secondary-color);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+}
+
+#back-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    position: relative;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #c49bff;
+    border-radius: 10000px;
+    bottom: 0;
+    /* Posiciona a linha na parte inferior do link */
+    left: 0;
+    transform: scaleX(0);
+    /* Inicialmente, a linha é invisível */
+    transform-origin: left;
+    transition: transform 0.6s ease;
+    /* Define a transição corretamente */
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+    /* Ao passar o mouse, a linha aparece  */
+}
+
+.link:hover::before {
+    color: var(--secondary-color);
+    color: #fff;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.contact-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.work-item {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.work-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-item-content {
+    padding: 1.5rem;
+}
+
+.work-item-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.work-item-link:hover {
+    background-color: var(--secondary-color);
+}
