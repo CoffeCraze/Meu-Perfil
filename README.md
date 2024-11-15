@@ -64,4 +64,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-⭐ Desenvolvido por Arthur Ferreira Borges
+⭐ Desenvolvido por CoffeCraze
